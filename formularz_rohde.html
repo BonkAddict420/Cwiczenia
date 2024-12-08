@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz Obsługi Klientów LOMBARDU</title>
+    <title>Formularz Zgłoszenia Problemów IT</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #66FFFF; /* Kolor tła: #66FFFF */
+            background-color: #CCE7FF; /* Kolor tła: #CCE7FF */
             margin: 20px;
         }
         form {
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<h1>Formularz Obsługi Klientów LOMBARDU</h1>
+<h1>Formularz Zgłoszenia Problemów IT</h1>
 
 <form action="mailto:mkryniew@ids.gda.pl" method="post" enctype="text/plain">
     <!-- Pola tekstowe -->
@@ -41,115 +41,115 @@
             <input type="text" name="name" placeholder="Podaj swoje imię i nazwisko">
         </label>
         <br><br>
-        <label>Email:
-            <input type="email" name="email" placeholder="Podaj swój email">
+        <label>Adres e-mail:
+            <input type="email" name="email" placeholder="Podaj swój adres e-mail">
         </label>
         <br><br>
-        <label>Numer telefonu (max 9 cyfr):
+        <label>Telefon kontaktowy:
             <input type="text" name="phone" maxlength="9">
         </label>
         <br><br>
-        <label>Hasło:
+        <label>Hasło do portalu IT:
             <input type="password" name="password">
         </label>
         <br><br>
-        <label>Adres:
-            <input type="text" name="address">
+        <label>Numer zgłoszenia (jeśli istnieje):
+            <input type="text" name="case_number">
         </label>
     </div>
 
     <!-- Obszar wprowadzania większej ilości tekstu -->
     <div class="section">
-        <label>Wiadomość:
-            <textarea name="message" rows="5" cols="40" placeholder="Wpisz swoją wiadomość"></textarea>
+        <label>Opis problemu:
+            <textarea name="problem_description" rows="5" cols="40" placeholder="Opisz swój problem techniczny"></textarea>
         </label>
     </div>
 
     <!-- Radio buttony -->
     <div class="section">
-        <p>Wybierz opcję (4 opcje, poziomo):</p>
+        <p>Jakiego systemu dotyczy problem (4 opcje, poziomo):</p>
         <div class="horizontal-options">
-            <label><input type="radio" name="option1" value="opcja1" checked> Opcja 1</label>
-            <label><input type="radio" name="option1" value="opcja2"> Opcja 2</label>
-            <label><input type="radio" name="option1" value="opcja3"> Opcja 3</label>
-            <label><input type="radio" name="option1" value="opcja4"> Opcja 4</label>
+            <label><input type="radio" name="system" value="windows" checked> Windows</label>
+            <label><input type="radio" name="system" value="linux"> Linux</label>
+            <label><input type="radio" name="system" value="mac"> macOS</label>
+            <label><input type="radio" name="system" value="other"> Inny</label>
         </div>
         <br>
-        <p>Wybierz opcję (3 opcje, pionowo):</p>
+        <p>Jak pilny jest problem (3 opcje, pionowo):</p>
         <div class="vertical-options">
-            <label><input type="radio" name="option2" value="opcja1"> Opcja 1</label>
-            <label><input type="radio" name="option2" value="opcja2"> Opcja 2</label>
-            <label><input type="radio" name="option2" value="opcja3"> Opcja 3</label>
+            <label><input type="radio" name="priority" value="low"> Niski</label>
+            <label><input type="radio" name="priority" value="medium"> Średni</label>
+            <label><input type="radio" name="priority" value="high"> Wysoki</label>
         </div>
         <br>
-        <p>Wybierz opcję (5 opcji, poziomo):</p>
+        <p>Czy problem dotyczy oprogramowania czy sprzętu (5 opcji, poziomo):</p>
         <div class="horizontal-options">
-            <label><input type="radio" name="option3" value="opcja1"> Opcja 1</label>
-            <label><input type="radio" name="option3" value="opcja2"> Opcja 2</label>
-            <label><input type="radio" name="option3" value="opcja3"> Opcja 3</label>
-            <label><input type="radio" name="option3" value="opcja4"> Opcja 4</label>
-            <label><input type="radio" name="option3" value="opcja5" checked> Opcja 5</label>
+            <label><input type="radio" name="category" value="software" checked> Oprogramowanie</label>
+            <label><input type="radio" name="category" value="hardware"> Sprzęt</label>
+            <label><input type="radio" name="category" value="network"> Sieć</label>
+            <label><input type="radio" name="category" value="security"> Bezpieczeństwo</label>
+            <label><input type="radio" name="category" value="other"> Inne</label>
         </div>
     </div>
 
     <!-- Checkboxy -->
     <div class="section">
-        <p>Wybierz (4 opcje, pionowo):</p>
+        <p>Jakie działania podjęto wcześniej? (4 opcje, pionowo):</p>
         <div class="vertical-options">
-            <label><input type="checkbox" name="checkbox1" value="1"> Opcja 1</label>
-            <label><input type="checkbox" name="checkbox1" value="2"> Opcja 2</label>
-            <label><input type="checkbox" name="checkbox1" value="3"> Opcja 3</label>
-            <label><input type="checkbox" name="checkbox1" value="4"> Opcja 4</label>
+            <label><input type="checkbox" name="actions" value="restart"> Restart komputera</label>
+            <label><input type="checkbox" name="actions" value="update"> Aktualizacja oprogramowania</label>
+            <label><input type="checkbox" name="actions" value="driver"> Instalacja sterowników</label>
+            <label><input type="checkbox" name="actions" value="other"> Inne</label>
         </div>
         <br>
-        <p>Wybierz (3 opcje, pionowo):</p>
+        <p>Jakie urządzenia są zaangażowane? (3 opcje, pionowo):</p>
         <div class="vertical-options">
-            <label><input type="checkbox" name="checkbox2" value="1"> Opcja 1</label>
-            <label><input type="checkbox" name="checkbox2" value="2"> Opcja 2</label>
-            <label><input type="checkbox" name="checkbox2" value="3"> Opcja 3</label>
+            <label><input type="checkbox" name="devices" value="pc"> Komputer stacjonarny</label>
+            <label><input type="checkbox" name="devices" value="laptop"> Laptop</label>
+            <label><input type="checkbox" name="devices" value="printer"> Drukarka</label>
         </div>
         <br>
-        <p>Wybierz (5 opcji, poziomo, domyślnie zaznaczona jedna):</p>
+        <p>Jakie aplikacje są związane z problemem? (5 opcji, poziomo, jedna zaznaczona domyślnie):</p>
         <div class="horizontal-options">
-            <label><input type="checkbox" name="checkbox3" value="1"> Opcja 1</label>
-            <label><input type="checkbox" name="checkbox3" value="2"> Opcja 2</label>
-            <label><input type="checkbox" name="checkbox3" value="3" checked> Opcja 3</label>
-            <label><input type="checkbox" name="checkbox3" value="4"> Opcja 4</label>
-            <label><input type="checkbox" name="checkbox3" value="5"> Opcja 5</label>
+            <label><input type="checkbox" name="apps" value="ms_office"> MS Office</label>
+            <label><input type="checkbox" name="apps" value="email"> Klient e-mail</label>
+            <label><input type="checkbox" name="apps" value="browser" checked> Przeglądarka</label>
+            <label><input type="checkbox" name="apps" value="antivirus"> Antywirus</label>
+            <label><input type="checkbox" name="apps" value="other"> Inne</label>
         </div>
     </div>
 
     <!-- Listy rozwijalne -->
     <div class="section">
-        <p>Wybierz z listy (5 opcji, domyślnie zaznaczona jedna):</p>
-        <select name="list1">
-            <option value="opcja1" selected>Opcja 1</option>
-            <option value="opcja2">Opcja 2</option>
-            <option value="opcja3">Opcja 3</option>
-            <option value="opcja4">Opcja 4</option>
-            <option value="opcja5">Opcja 5</option>
+        <p>Typ zgłoszenia (5 opcji, domyślnie zaznaczona jedna):</p>
+        <select name="ticket_type">
+            <option value="bug_report" selected>Zgłoszenie błędu</option>
+            <option value="request">Prośba o nową funkcjonalność</option>
+            <option value="question">Pytanie techniczne</option>
+            <option value="feedback">Opinia</option>
+            <option value="other">Inne</option>
         </select>
         <br><br>
-        <p>Wybierz z listy (4 opcje, brak domyślnej):</p>
-        <select name="list2">
-            <option value="opcja1">Opcja 1</option>
-            <option value="opcja2">Opcja 2</option>
-            <option value="opcja3">Opcja 3</option>
-            <option value="opcja4">Opcja 4</option>
+        <p>Preferowana metoda kontaktu (4 opcje, brak domyślnej):</p>
+        <select name="contact_method">
+            <option value="email">E-mail</option>
+            <option value="phone">Telefon</option>
+            <option value="chat">Czat online</option>
+            <option value="in_person">Osobiście</option>
         </select>
         <br><br>
-        <p>Wybierz z listy (3 opcje, domyślnie zaznaczona jedna):</p>
-        <select name="list3">
-            <option value="opcja1" selected>Opcja 1</option>
-            <option value="opcja2">Opcja 2</option>
-            <option value="opcja3">Opcja 3</option>
+        <p>Czy problem został wcześniej zgłoszony? (3 opcje, domyślnie zaznaczona jedna):</p>
+        <select name="previous_report">
+            <option value="no" selected>Nie</option>
+            <option value="yes">Tak</option>
+            <option value="unknown">Nie wiem</option>
         </select>
     </div>
 
     <!-- Przyciski -->
     <div class="section">
-        <button type="button" onclick="alert('Dziękujemy za skorzystanie z formularza!')">Przycisk 1</button>
-        <button type="button" onclick="alert('Przycisk 2 działa poprawnie!')">Przycisk 2</button>
+        <button type="button" onclick="alert('Dziękujemy za zgłoszenie problemu!')">Potwierdź zgłoszenie</button>
+        <button type="button" onclick="alert('Przycisk testowy!')">Sprawdź funkcję</button>
     </div>
 
     <!-- Przyciski wysyłania i resetowania -->
