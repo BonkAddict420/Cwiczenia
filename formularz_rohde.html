@@ -1,12 +1,163 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
-<html>
-	<head>
-		<meta charset="utf-8"> 
-		<title>Rohde Formularz</title>
-	</head>
-	<body>
-		<form enctype="text/plain" action="mailto:mkryniew@poczta.wp.pl?subject=list do nauczyciela" method="Post">
-		<a href="index.html">Wróć</a>
-	</body>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Obsługi Klientów LOMBARDU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #66FFFF; /* Kolor tła: #66FFFF */
+            margin: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .horizontal-options label {
+            margin-right: 20px;
+        }
+        .vertical-options label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Formularz Obsługi Klientów LOMBARDU</h1>
+
+<form action="mailto:mkryniew@ids.gda.pl" method="post" enctype="text/plain">
+    <!-- Pola tekstowe -->
+    <div class="section">
+        <label>Imię i nazwisko:
+            <input type="text" name="name" placeholder="Podaj swoje imię i nazwisko">
+        </label>
+        <br><br>
+        <label>Email:
+            <input type="email" name="email" placeholder="Podaj swój email">
+        </label>
+        <br><br>
+        <label>Numer telefonu (max 9 cyfr):
+            <input type="text" name="phone" maxlength="9">
+        </label>
+        <br><br>
+        <label>Hasło:
+            <input type="password" name="password">
+        </label>
+        <br><br>
+        <label>Adres:
+            <input type="text" name="address">
+        </label>
+    </div>
+
+    <!-- Obszar wprowadzania większej ilości tekstu -->
+    <div class="section">
+        <label>Wiadomość:
+            <textarea name="message" rows="5" cols="40" placeholder="Wpisz swoją wiadomość"></textarea>
+        </label>
+    </div>
+
+    <!-- Radio buttony -->
+    <div class="section">
+        <p>Wybierz opcję (4 opcje, poziomo):</p>
+        <div class="horizontal-options">
+            <label><input type="radio" name="option1" value="opcja1" checked> Opcja 1</label>
+            <label><input type="radio" name="option1" value="opcja2"> Opcja 2</label>
+            <label><input type="radio" name="option1" value="opcja3"> Opcja 3</label>
+            <label><input type="radio" name="option1" value="opcja4"> Opcja 4</label>
+        </div>
+        <br>
+        <p>Wybierz opcję (3 opcje, pionowo):</p>
+        <div class="vertical-options">
+            <label><input type="radio" name="option2" value="opcja1"> Opcja 1</label>
+            <label><input type="radio" name="option2" value="opcja2"> Opcja 2</label>
+            <label><input type="radio" name="option2" value="opcja3"> Opcja 3</label>
+        </div>
+        <br>
+        <p>Wybierz opcję (5 opcji, poziomo):</p>
+        <div class="horizontal-options">
+            <label><input type="radio" name="option3" value="opcja1"> Opcja 1</label>
+            <label><input type="radio" name="option3" value="opcja2"> Opcja 2</label>
+            <label><input type="radio" name="option3" value="opcja3"> Opcja 3</label>
+            <label><input type="radio" name="option3" value="opcja4"> Opcja 4</label>
+            <label><input type="radio" name="option3" value="opcja5" checked> Opcja 5</label>
+        </div>
+    </div>
+
+    <!-- Checkboxy -->
+    <div class="section">
+        <p>Wybierz (4 opcje, pionowo):</p>
+        <div class="vertical-options">
+            <label><input type="checkbox" name="checkbox1" value="1"> Opcja 1</label>
+            <label><input type="checkbox" name="checkbox1" value="2"> Opcja 2</label>
+            <label><input type="checkbox" name="checkbox1" value="3"> Opcja 3</label>
+            <label><input type="checkbox" name="checkbox1" value="4"> Opcja 4</label>
+        </div>
+        <br>
+        <p>Wybierz (3 opcje, pionowo):</p>
+        <div class="vertical-options">
+            <label><input type="checkbox" name="checkbox2" value="1"> Opcja 1</label>
+            <label><input type="checkbox" name="checkbox2" value="2"> Opcja 2</label>
+            <label><input type="checkbox" name="checkbox2" value="3"> Opcja 3</label>
+        </div>
+        <br>
+        <p>Wybierz (5 opcji, poziomo, domyślnie zaznaczona jedna):</p>
+        <div class="horizontal-options">
+            <label><input type="checkbox" name="checkbox3" value="1"> Opcja 1</label>
+            <label><input type="checkbox" name="checkbox3" value="2"> Opcja 2</label>
+            <label><input type="checkbox" name="checkbox3" value="3" checked> Opcja 3</label>
+            <label><input type="checkbox" name="checkbox3" value="4"> Opcja 4</label>
+            <label><input type="checkbox" name="checkbox3" value="5"> Opcja 5</label>
+        </div>
+    </div>
+
+    <!-- Listy rozwijalne -->
+    <div class="section">
+        <p>Wybierz z listy (5 opcji, domyślnie zaznaczona jedna):</p>
+        <select name="list1">
+            <option value="opcja1" selected>Opcja 1</option>
+            <option value="opcja2">Opcja 2</option>
+            <option value="opcja3">Opcja 3</option>
+            <option value="opcja4">Opcja 4</option>
+            <option value="opcja5">Opcja 5</option>
+        </select>
+        <br><br>
+        <p>Wybierz z listy (4 opcje, brak domyślnej):</p>
+        <select name="list2">
+            <option value="opcja1">Opcja 1</option>
+            <option value="opcja2">Opcja 2</option>
+            <option value="opcja3">Opcja 3</option>
+            <option value="opcja4">Opcja 4</option>
+        </select>
+        <br><br>
+        <p>Wybierz z listy (3 opcje, domyślnie zaznaczona jedna):</p>
+        <select name="list3">
+            <option value="opcja1" selected>Opcja 1</option>
+            <option value="opcja2">Opcja 2</option>
+            <option value="opcja3">Opcja 3</option>
+        </select>
+    </div>
+
+    <!-- Przyciski -->
+    <div class="section">
+        <button type="button" onclick="alert('Dziękujemy za skorzystanie z formularza!')">Przycisk 1</button>
+        <button type="button" onclick="alert('Przycisk 2 działa poprawnie!')">Przycisk 2</button>
+    </div>
+
+    <!-- Przyciski wysyłania i resetowania -->
+    <div class="section">
+        <input type="submit" value="WYŚLIJ">
+        <input type="reset" value="CZYŚĆ">
+    </div>
+</form>
+
+</body>
 </html>
